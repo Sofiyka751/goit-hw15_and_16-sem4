@@ -1,7 +1,7 @@
-// import axios from "axios";
-axios.get('https://api.example.com/data')
-  .then(res => console.log(res.data))
-  .catch(err => console.error(err));
+import axios from "axios";
+// axios.get('https://api.example.com/data')
+//   .then(res => console.log(res.data))
+//   .catch(err => console.error(err));
 import debounce from "lodash.debounce";
 import { alert, info } from "@pnotify/core";
 import "@pnotify/core/dist/PNotify.css";
