@@ -2,10 +2,10 @@
 // // axios.get('https://api.example.com/data')
 // //   .then(res => console.log(res.data))
 // //   .catch(err => console.error(err));
-import debounce from "lodash.debounce";
-import { alert, info } from "@pnotify/core";
-import "@pnotify/core/dist/PNotify.css";
-import "@pnotify/core/dist/BrightTheme.css";
+// import debounce from "lodash.debounce";
+// import { alert, info } from "@pnotify/core";
+// import "@pnotify/core/dist/PNotify.css";
+// import "@pnotify/core/dist/BrightTheme.css";
 
 const searchInput = document.getElementById('search');
 const infoList = document.querySelector('.country-list');
