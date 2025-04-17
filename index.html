@@ -1,60 +1,10 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/BrightTheme.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <h1 class="head-text">Пошук країн</h1>
-    <input type="text" id="search" placeholder="Введіть назву країни" />
-    <div id="containner">
-      <ul class="country-list"></ul>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-      const searchInput = document.getElementById("search");
-      
-      const debounceSearch = _.debounce(function(value) {
-        console.log("Шукаємо країну:", value);
-      }, 500);
-
-      searchInput.addEventListener("input", function(e) {
-        debounceSearch(e.target.value);
-      });
-
-      axios
-        .get("https://jsonplaceholder.typicode.com/posts/1")
-        .then(function (response) {
-          console.log("Дані отримано:", response.data);
-        })
-        .catch(function (error) {
-          console.error("Сталася помилка:", error);
-        });
-    </script>
-    <script type="module" src="./index.js"></script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.css"
@@ -68,11 +18,14 @@
     <title>Document</title>
   </head>
   <body>
+
     <h1 class="head-text">Пошук країн</h1>
     <input type="text" id="search" placeholder="Введіть назву країни" />
     <div id="containner">
       <ul class="country-list"></ul>
     </div>
+
+    
     <script src="js/index.js"></script>
   </body>
 </html>
