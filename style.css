@@ -1,0 +1,8 @@
+#search{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(108, 105, 105);
+}
+.country-list {
+    list-style: none;
+}
