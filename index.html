@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.css"
@@ -14,7 +14,6 @@
       href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/BrightTheme.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.js"></script>
-
     <title>Document</title>
   </head>
   <body>
@@ -24,9 +23,18 @@
       <ul class="country-list"></ul>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
+      const searchInput = document.getElementById("search");
+      
+      const debounceSearch = _.debounce(function(value) {
+        console.log("Шукаємо країну:", value);
+      }, 500);
+
+      searchInput.addEventListener("input", function(e) {
+        debounceSearch(e.target.value);
+      });
+
       axios
         .get("https://jsonplaceholder.typicode.com/posts/1")
         .then(function (response) {
