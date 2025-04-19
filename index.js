@@ -3,7 +3,7 @@ const infoList = document.querySelector('.country-list');
 
 async function getName(valueInput) {
     try {
-        const { data } = await axios.get(`https://restcountries.com/v3.1/name/${valueInput}`);
+        const { data } = await fetch(`https://restcountries.com/v3.1/name/${valueInput}`);
         
         if (data.length > 10) {
             infoList.innerHTML = '';
