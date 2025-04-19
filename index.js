@@ -7,7 +7,7 @@ async function getName(valueInput) {
         
         if (data.length > 10) {
             infoList.innerHTML = '';
-            PNotify.alert({
+            alert({
                 text: "Знайдено занадто багато збігів. Будь ласка, введіть більш конкретний запит!",
                 delay: 2000,
             });
@@ -16,8 +16,8 @@ async function getName(valueInput) {
 
         makeHtml(data);
     } catch (error) {
-        console.error(error);
-        PNotify.alert({
+        console.log(error);
+        alert({
             text: "Країна не знайдена. Будь ласка, перевірте ваші дані.",
             delay: 2000,
         });
