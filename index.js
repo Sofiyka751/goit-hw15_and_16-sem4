@@ -18,12 +18,12 @@ async function getName(valueInput) {
 
     makeHtml(data);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     alert({
-      text: "Країна не знайдена. Будь ласка, перевірте ваші дані.",
+      text: error.message || "Сталася помилка при пошуку країни.",
       delay: 2000,
     });
-    infoList.innerHTML = "";
+    infoList.innerHTML = '';
   }
 }
 
