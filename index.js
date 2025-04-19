@@ -51,4 +51,3 @@ function searchCountry(e) {
 }
 
 searchInput.addEventListener('input', _.debounce(searchCountry, 500));
-
