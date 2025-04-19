@@ -3,17 +3,13 @@ const infoList = document.querySelector(".country-list");
 
 async function getName(valueInput) {
   try {
-    const response = await fetch(
+    const { data } = await fetch(
       `https://restcountries.com/v3.1/name/${valueInput}`
     );
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    const data = await response.json();
 
     if (data.length > 10) {
       infoList.innerHTML = "";
-      PNotify.alert({
+      alert({
         text: "Знайдено занадто багато збігів. Будь ласка, введіть більш конкретний запит!",
         delay: 2000,
       });
@@ -22,8 +18,8 @@ async function getName(valueInput) {
 
     makeHtml(data);
   } catch (error) {
-    console.error(error);
-    PNotify.alert({
+    console.log(error);
+    alert({
       text: "Країна не знайдена. Будь ласка, перевірте ваші дані.",
       delay: 2000,
     });
