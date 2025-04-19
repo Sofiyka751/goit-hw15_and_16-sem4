@@ -3,7 +3,7 @@ const infoList = document.querySelector(".country-list");
 
 async function getName(valueInput) {
   try {
-    const { data } = await fetch(
+    const { data } = await axios.get(
       `https://restcountries.com/v3.1/name/${valueInput}`
     );
 
@@ -18,12 +18,12 @@ async function getName(valueInput) {
 
     makeHtml(data);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     alert({
-      text: error.message || "Сталася помилка при пошуку країни.",
+      text: "Країна не знайдена. Будь ласка, перевірте ваші дані.",
       delay: 2000,
     });
-    infoList.innerHTML = '';
+    infoList.innerHTML = "";
   }
 }
 
